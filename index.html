@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO primario -->
-    <title>Onel Martínez | Desarrollo Web Profesional para Negocios</title>
-    <meta name="description" content="Desarrollador web freelance especializado en páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos. Astro, React y TypeScript.">
+    <title data-i18n="meta.title">Onel Martínez | Desarrollo Web Profesional para Negocios</title>
+    <meta name="description" data-i18n-attr="content:meta.description" content="Desarrollador web freelance especializado en páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos. Astro, React y TypeScript.">
     <meta name="author" content="Onel Martínez">
     <meta name="keywords" content="desarrollo web, diseño web, páginas web para negocios, desarrollador freelance, Astro, React, TypeScript, landing page, e-commerce, catálogo online">
     <meta name="robots" content="index, follow">
@@ -16,18 +16,18 @@
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Onel Martínez — Desarrollo Web">
-    <meta property="og:title" content="Onel Martínez | Desarrollo Web Profesional para Negocios">
-    <meta property="og:description" content="Páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos. Astro, React y TypeScript.">
+    <meta property="og:title" data-i18n-attr="content:meta.ogTitle" content="Onel Martínez | Desarrollo Web Profesional para Negocios">
+    <meta property="og:description" data-i18n-attr="content:meta.ogDesc" content="Páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos. Astro, React y TypeScript.">
     <meta property="og:url" content="https://webyonel.github.io/">
     <meta property="og:image" content="https://webyonel.github.io/img/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale" data-i18n-attr="content:meta.ogLocale" content="es_ES">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Onel Martínez | Desarrollo Web Profesional para Negocios">
-    <meta name="twitter:description" content="Páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos.">
+    <meta name="twitter:title" data-i18n-attr="content:meta.twitterTitle" content="Onel Martínez | Desarrollo Web Profesional para Negocios">
+    <meta name="twitter:description" data-i18n-attr="content:meta.twitterDesc" content="Páginas web modernas, rápidas y con diseño profesional para negocios y emprendimientos.">
     <meta name="twitter:image" content="https://webyonel.github.io/img/og-image.png">
 
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Datos estructurados -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-i18n-jsonld>
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
@@ -82,18 +82,24 @@
                 <span class="logo-text">dev</span>
             </a>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
             <nav class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="#trabajos" class="nav-link">Trabajos</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="#inicio" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="#sobre-mi" class="nav-link" data-i18n="nav.about">Sobre mí</a>
+                <a href="#trabajos" class="nav-link" data-i18n="nav.work">Trabajos</a>
+                <a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
             </nav>
+
+            <div class="nav-end">
+                <div class="lang-toggle" role="group" aria-label="Language">
+                    <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button class="nav-toggle" id="navToggle" data-i18n-attr="aria-label:aria.navToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -101,20 +107,20 @@
     <section class="hero" id="inicio">
         <div class="hero-bg"></div>
         <div class="container hero-content">
-            <span class="hero-badge">Disponible para nuevos proyectos</span>
+            <span class="hero-badge" data-i18n="hero.badge">Disponible para nuevos proyectos</span>
             <h1 class="hero-title">
-                Desarrollo web profesional
-                <span class="hero-highlight">para tu negocio</span>
+                <span data-i18n="hero.title1">Desarrollo web profesional</span>
+                <span class="hero-highlight" data-i18n="hero.title2">para tu negocio</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
                 Páginas web modernas, rápidas y diseñadas para que tu emprendimiento destaque en internet.
             </p>
             <div class="hero-cta">
                 <a href="#trabajos" class="btn btn-primary">
-                    Ver mis trabajos
+                    <span data-i18n="hero.ctaPrimary">Ver mis trabajos</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="#contacto" class="btn btn-ghost">Contactar</a>
+                <a href="#contacto" class="btn btn-ghost" data-i18n="hero.ctaGhost">Contactar</a>
             </div>
         </div>
     </section>
@@ -129,22 +135,22 @@
                 <div class="about-image-decor"></div>
             </div>
             <div class="about-text">
-                <span class="section-tag">Sobre mí</span>
-                <h2 class="section-title">¿Quién está detrás del código?</h2>
-                <p>
+                <span class="section-tag" data-i18n="about.tag">Sobre mí</span>
+                <h2 class="section-title" data-i18n="about.title">¿Quién está detrás del código?</h2>
+                <p data-i18n="about.p1">
                     Soy desarrollador web especializado en crear páginas web profesionales para negocios y emprendimientos. Me dedico a transformar ideas en productos digitales funcionales, rápidos y con un diseño que transmite profesionalidad.
                 </p>
-                <p>
+                <p data-i18n="about.p2">
                     Trabajo con herramientas modernas y me enfoco en que cada proyecto resuelva un problema real: captar clientes, mostrar servicios o vender productos en línea.
                 </p>
                 <div class="about-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Ubicación</span>
-                        <span class="meta-value">🌎 Remoto · Global</span>
+                        <span class="meta-label" data-i18n="about.locationLabel">Ubicación</span>
+                        <span class="meta-value" data-i18n="about.locationValue">🌎 Remoto · Global</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Enfoque</span>
-                        <span class="meta-value">Negocios &amp; emprendimientos</span>
+                        <span class="meta-label" data-i18n="about.focusLabel">Enfoque</span>
+                        <span class="meta-value" data-i18n="about.focusValue">Negocios &amp; emprendimientos</span>
                     </div>
                 </div>
             </div>
@@ -155,18 +161,18 @@
     <section class="section works" id="trabajos">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Portafolio</span>
-                <h2 class="section-title">Trabajos realizados</h2>
-                <p class="section-desc">Una muestra de proyectos desarrollados para clientes reales.</p>
+                <span class="section-tag" data-i18n="works.tag">Portafolio</span>
+                <h2 class="section-title" data-i18n="works.title">Trabajos realizados</h2>
+                <p class="section-desc" data-i18n="works.desc">Una muestra de proyectos desarrollados para clientes reales.</p>
             </div>
 
             <div class="works-grid">
 
                 <article class="work-card">
                     <div class="work-image">
-                        <img src="img/tuyo_mio.webp" alt="Sitio web de la hamburguesería Tuyo &amp; Mío" loading="lazy" decoding="async">
+                        <img src="img/tuyo_mio.webp" data-i18n-attr="alt:works.tuyoMio.alt" alt="Sitio web de la hamburguesería Tuyo &amp; Mío" loading="lazy" decoding="async">
                         <div class="work-overlay">
-                            <a href="#" class="work-link" aria-label="Ver demo">
+                            <a href="#" class="work-link" data-i18n-attr="aria-label:works.tuyoMio.ariaDemo" aria-label="Ver demo">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </div>
@@ -174,7 +180,7 @@
                     <div class="work-info">
                         <span class="work-category">Landing page</span>
                         <h3 class="work-title">Tuyo &amp; Mío</h3>
-                        <p class="work-desc">Sitio web para hamburguesería con hamburguesas a la parrilla, pizzas artesanales y acompañamientos caseros.</p>
+                        <p class="work-desc" data-i18n="works.tuyoMio.desc">Sitio web para hamburguesería con hamburguesas a la parrilla, pizzas artesanales y acompañamientos caseros.</p>
                         <div class="work-tags">
                             <span>Astro</span><span>TypeScript</span><span>Supabase</span>
                         </div>
@@ -183,9 +189,9 @@
 
                 <article class="work-card">
                     <div class="work-image">
-                        <img src="img/after_life.webp" alt="Sitio web del restaurante After Life" loading="lazy" decoding="async">
+                        <img src="img/after_life.webp" data-i18n-attr="alt:works.afterLife.alt" alt="Sitio web del restaurante After Life" loading="lazy" decoding="async">
                         <div class="work-overlay">
-                            <a href="https://webyonel.github.io/afterlife/" class="work-link" target="_blank" rel="noopener" aria-label="Ver demo de After Life">
+                            <a href="https://webyonel.github.io/afterlife/" class="work-link" target="_blank" rel="noopener" data-i18n-attr="aria-label:works.afterLife.ariaDemo" aria-label="Ver demo de After Life">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </div>
@@ -193,7 +199,7 @@
                     <div class="work-info">
                         <span class="work-category">Landing page</span>
                         <h3 class="work-title">After Life</h3>
-                        <p class="work-desc">Sitio web para restaurante de pizzas, hamburguesas y lasañas caseras con carta digital y pedidos online.</p>
+                        <p class="work-desc" data-i18n="works.afterLife.desc">Sitio web para restaurante de pizzas, hamburguesas y lasañas caseras con carta digital y pedidos online.</p>
                         <div class="work-tags">
                             <span>Astro</span><span>TypeScript</span><span>Supabase</span>
                         </div>
@@ -202,9 +208,9 @@
 
                 <article class="work-card">
                     <div class="work-image">
-                        <img src="img/ciador.webp" alt="Catálogo online de la tienda Ciador de relojes y perfumes" loading="lazy" decoding="async">
+                        <img src="img/ciador.webp" data-i18n-attr="alt:works.ciador.alt" alt="Catálogo online de la tienda Ciador de relojes y perfumes" loading="lazy" decoding="async">
                         <div class="work-overlay">
-                            <a href="https://ciador.vercel.app/" class="work-link" target="_blank" rel="noopener" aria-label="Ver demo de Ciador">
+                            <a href="https://ciador.vercel.app/" class="work-link" target="_blank" rel="noopener" data-i18n-attr="aria-label:works.ciador.ariaDemo" aria-label="Ver demo de Ciador">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </div>
@@ -212,7 +218,7 @@
                     <div class="work-info">
                         <span class="work-category">Catálogo online</span>
                         <h3 class="work-title">Ciador</h3>
-                        <p class="work-desc">Tienda de relojes y perfumes en Ciego de Ávila con catálogo público y atención directa por WhatsApp.</p>
+                        <p class="work-desc" data-i18n="works.ciador.desc">Tienda de relojes y perfumes en Ciego de Ávila con catálogo público y atención directa por WhatsApp.</p>
                         <div class="work-tags">
                             <span>Astro</span><span>TypeScript</span><span>Supabase</span>
                         </div>
@@ -221,9 +227,9 @@
 
                 <article class="work-card">
                     <div class="work-image">
-                        <img src="img/jm_house.webp" alt="Tienda online de audio JM House" loading="lazy" decoding="async">
+                        <img src="img/jm_house.webp" data-i18n-attr="alt:works.jmHouse.alt" alt="Tienda online de audio JM House" loading="lazy" decoding="async">
                         <div class="work-overlay">
-                            <a href="https://webyonel.github.io/jm-house/" class="work-link" target="_blank" rel="noopener" aria-label="Ver demo de JM House">
+                            <a href="https://webyonel.github.io/jm-house/" class="work-link" target="_blank" rel="noopener" data-i18n-attr="aria-label:works.jmHouse.ariaDemo" aria-label="Ver demo de JM House">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </div>
@@ -231,7 +237,7 @@
                     <div class="work-info">
                         <span class="work-category">E-commerce</span>
                         <h3 class="work-title">JM House</h3>
-                        <p class="work-desc">Catálogo online de productos de audio: altavoces, amplificadores y accesorios con categorías y carrito.</p>
+                        <p class="work-desc" data-i18n="works.jmHouse.desc">Catálogo online de productos de audio: altavoces, amplificadores y accesorios con categorías y carrito.</p>
                         <div class="work-tags">
                             <span>React</span><span>TypeScript</span><span>CSS</span>
                         </div>
@@ -240,9 +246,9 @@
 
                 <article class="work-card">
                     <div class="work-image">
-                        <img src="img/ciadro_admin.webp" alt="Panel administrativo de gestión de catálogo Ciador Admin" loading="lazy" decoding="async">
+                        <img src="img/ciadro_admin.webp" data-i18n-attr="alt:works.ciadorAdmin.alt" alt="Panel administrativo de gestión de catálogo Ciador Admin" loading="lazy" decoding="async">
                         <div class="work-overlay">
-                            <a href="#" class="work-link" aria-label="Ver demo">
+                            <a href="#" class="work-link" data-i18n-attr="aria-label:works.ciadorAdmin.ariaDemo" aria-label="Ver demo">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </div>
@@ -250,7 +256,7 @@
                     <div class="work-info">
                         <span class="work-category">Panel administrativo</span>
                         <h3 class="work-title">Ciador Admin</h3>
-                        <p class="work-desc">Sistema de gestión de catálogo para tienda de relojes y perfumes con control de productos y stock.</p>
+                        <p class="work-desc" data-i18n="works.ciadorAdmin.desc">Sistema de gestión de catálogo para tienda de relojes y perfumes con control de productos y stock.</p>
                         <div class="work-tags">
                             <span>React</span><span>TypeScript</span>
                         </div>
@@ -265,34 +271,34 @@
     <section class="section skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Stack</span>
-                <h2 class="section-title">Tecnologías que uso</h2>
+                <span class="section-tag" data-i18n="skills.tag">Stack</span>
+                <h2 class="section-title" data-i18n="skills.title">Tecnologías que uso</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">▲</div>
                     <h4>Astro</h4>
-                    <p>Sitios rápidos con islas interactivas y SEO optimizado.</p>
+                    <p data-i18n="skills.astro">Sitios rápidos con islas interactivas y SEO optimizado.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚛</div>
                     <h4>React</h4>
-                    <p>Interfaces dinámicas y componentes reutilizables.</p>
+                    <p data-i18n="skills.react">Interfaces dinámicas y componentes reutilizables.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">▣</div>
                     <h4>Responsive</h4>
-                    <p>Adaptado a móviles, tablets y escritorio.</p>
+                    <p data-i18n="skills.responsive">Adaptado a móviles, tablets y escritorio.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">↗</div>
                     <h4>Git &amp; GitHub</h4>
-                    <p>Control de versiones y despliegue.</p>
+                    <p data-i18n="skills.git">Control de versiones y despliegue.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">◆</div>
                     <h4>Figma</h4>
-                    <p>Diseño de interfaces y prototipos.</p>
+                    <p data-i18n="skills.figma">Diseño de interfaces y prototipos.</p>
                 </div>
             </div>
         </div>
@@ -302,11 +308,11 @@
     <footer class="footer" id="contacto">
         <div class="container footer-content">
             <div class="footer-text">
-                <h2 class="footer-title">¿Listo para empezar tu proyecto?</h2>
-                <p>Escríbeme y conversamos sobre cómo puedo ayudar a tu negocio a tener presencia en internet.</p>
+                <h2 class="footer-title" data-i18n="footer.title">¿Listo para empezar tu proyecto?</h2>
+                <p data-i18n="footer.desc">Escríbeme y conversamos sobre cómo puedo ayudar a tu negocio a tener presencia en internet.</p>
             </div>
             <div class="footer-actions">
-                <a href="https://wa.me/5350200708?text=Buenas%2C%20me%20interesan%20tus%20servicios" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">
+                <a href="https://wa.me/5350200708?text=Buenas%2C%20me%20interesan%20tus%20servicios" data-i18n-attr="href:whatsapp.url" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                     WhatsApp
                 </a>
@@ -317,7 +323,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 — Hecho con <span class="heart">♥</span></p>
+            <p><span data-i18n="footer.copyright">© 2026 — Hecho con</span> <span class="heart">♥</span></p>
         </div>
     </footer>
 

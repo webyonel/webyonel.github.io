@@ -98,7 +98,14 @@ a {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav-end {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo {
@@ -137,6 +144,53 @@ a {
 .nav-link:hover {
     color: var(--accent-bright);
     background: var(--accent-soft);
+}
+
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.lang-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: color var(--transition), background var(--transition), box-shadow var(--transition);
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: var(--accent-bright);
+}
+
+.lang-btn.active {
+    background: var(--accent);
+    color: #04201a;
+    box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+.lang-btn.active:hover {
+    color: #04201a;
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid var(--accent-bright);
+    outline-offset: 2px;
 }
 
 .nav-toggle {
